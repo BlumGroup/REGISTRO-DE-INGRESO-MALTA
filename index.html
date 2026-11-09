@@ -265,6 +265,16 @@
       <a class="btn btn-primary" id="wel-maps-link" href="#" target="_blank" rel="noopener" style="display:block; text-decoration:none;">Abrir ubicación en Google Maps</a>
     </div>
 
+    <div class="section-title">Conectividad</div>
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>WiFi</div>
+      <div class="reserva-row"><span class="k">Red</span><span class="v" id="wel-wifi-red"></span></div>
+      <div class="reserva-row" style="border-bottom:none;">
+        <span class="k">Clave</span>
+        <span class="v" id="wel-wifi-clave"></span>
+      </div>
+    </div>
+
     <div class="section-title" id="wel-tiendas-title" style="display:none;">Tiendas y servicios cercanos</div>
     <div class="card" id="wel-tiendas-card" style="display:none;">
       <div class="card-title"><span class="dot"></span>Directorio local</div>
@@ -308,6 +318,8 @@ const CONFIG = {
   MAPS_URL: "https://maps.google.com/?q=Cl+1C+%2320-115,+Sabanilla+Montecarmelo,+Barranquilla,+Atl%C3%A1ntico",
   INGRESO_TITULO: "123456✅",
   INSTRUCCIONES_INGRESO: "<b>Ingreso:</b> anúnciate en portería indicando torre y número de apto. No es necesario mostrar la reserva.",
+  WIFI_RED: "ALEXA",
+  WIFI_CLAVE: "3265492026",
   TIENDAS: [
     { nombre: "Tienda cercana", tag: "Mercado", telefono: "+573105412089" }
   ],
@@ -335,6 +347,8 @@ function fillWelcomeInfo(){
   document.getElementById('wel-ingreso').textContent = CONFIG.INGRESO_TITULO;
   document.getElementById('wel-instrucciones').innerHTML = CONFIG.INSTRUCCIONES_INGRESO;
   document.getElementById('wel-maps-link').href = CONFIG.MAPS_URL;
+  document.getElementById('wel-wifi-red').textContent = CONFIG.WIFI_RED;
+  document.getElementById('wel-wifi-clave').textContent = CONFIG.WIFI_CLAVE;
 
   document.getElementById('wel-anfitrion-tel').href = 'tel:' + CONFIG.ANFITRION_TEL;
   document.getElementById('wel-anfitrion-wa').href = 'https://wa.me/' + waNumber(CONFIG.ANFITRION_TEL);
